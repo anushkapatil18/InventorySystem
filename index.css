@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+    background-color: bisque;
+}
+
+#leftCol{
+    float: left;
+    background-color: brown;
+    padding-bottom: 30%;
+    
+}
+#rightCol{
+    float: right;
+    padding-right: 100px;
+    background-color: brown;
+    width: 60%;
+    display: flex;
+}
+h1{
+    color: white;
+}
+
+button{
+  margin: 20px;
+  padding: 14px;
+  font-size: large;
+  font-family: 'Montserrat', sans-serif;
+  background-color: brown;
+  color: white;
+  border: 1rem;
+  font-weight: 500;
+}
+button:hover{
+    background-color: rgb(190, 101, 101);
+    color: white;
+}
+#verBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 50px;
+    width: 300px;
+    background-color: brown;
+  }
+  
+  input {
+    display: block;
+    padding: 8px 16px;
+    font-size: large;
+  font-family: 'Montserrat', sans-serif;
+  background-color: brown;
+  color: white;
+  border: 1rem;
+  width: 265px;
+  }
+
+  #ids{
+    display: block;
+    padding: 8px 16px;
+    font-size: large;
+  font-family: 'Montserrat', sans-serif;
+  background-color: brown;
+  color: white;
+  border: 1rem;
+  width: 265px;
+  }
+  
+  /* Change the link color on hover */
+  input:hover {
+    background-color: rgb(190, 101, 101);
+    color: white;
+  }
+
+#bar{
+    list-style-type: none;
+    margin: 0;
+    padding: 40px;
+    width: 100px;
+    background-color: brown;
+    display: flex;
+}
+
+#fm{
+    padding: 100px;
+    width: 65%;
+}
+
+form{
+    display: inline;
+}
+
+#success{
+    padding: 100px;
+    margin: 200px;
+    color: green;
+    font-size: xx-large;
+}
+
+#error{
+    padding: 100px;
+    margin: 200px;
+    color: red;
+    font-size: xx-large;
+}
+
