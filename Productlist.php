@@ -33,8 +33,6 @@ td, th {
     <ul id="bar">
 	<form method='post' action='ProductPurchase.php'>
        <li> <input type='submit' id='purchase' value='Purchase' name='purchase'/></li></form>
-       <form method='post' action='ProductSales.php'>
-       <li> <input type='submit' id='sales' value='Sales' name='sales'/></li></form>
        <form method='post' action='ProductList.php'>
        <li> <input type='submit' id='list' value='List' name='list'/></li></form>
 </ul>

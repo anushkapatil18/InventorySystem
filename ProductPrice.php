@@ -19,17 +19,16 @@
 
 <div id='rightCol'>
     <ul id="bar">
-	<form method='post' action='ProductPurchase.php'>
+    <form method='post' action='ProductPurchase.php'>
        <li> <input type='submit' id='purchase' value='Purchase' name='purchase'/></li></form>
-       <form method='post' action='ProductSales.php'>
-       <li> <input type='submit' id='sales' value='Sales' name='sales'/></li></form>
        <form method='post' action='ProductList.php'>
        <li> <input type='submit' id='list' value='List' name='list'/></li></form>
 </ul>
     </div>
 
+
     <table id="fm">
-		<form method=post action="msg.php">
+		<form method=post action="ProductPrice.php">
 			<tr>
 				<td>
 					<label for="ids">
@@ -37,7 +36,7 @@
 					</label>
 				</td>
 				<td><select name="ids" id="ids">
-                <option value="10">--SELECT--</option>
+                <option value="maggie">--SELECT--</option>
   <option value="maggie">101-Maggie</option>
   <option value="soap">102-Soap</option>
   <option value="chocolate">103-Chocolate</option>
@@ -53,16 +52,51 @@
 				<td><input type="number" id="qty" name="qty"/>
 				</td>
 			</tr>
-			<tr>
-				<td><label for="price">
-						Price
+			<tr><td></td><td><input type="submit" value="Product Purchase" name="submit"/></td></tr></form>
+			<?php 
+			$p = $_POST['ids'];
+			$q = $_POST['qty'];
+            
+			$amt=0;
+            $o=0;
+            $item="";
+            if($p=="maggie"){
+                $amt = $q * 20;
+                $o=20;
+                $item="Maggie";
+            }
+            else if($p=="soap"){
+                $amt = $q * 25;
+                $o=25;
+                $item="Soap";
+            }
+            else if($p=="chocolate"){
+                $amt = $q * 4;
+                $o=4;
+                $item="Chocolate";
+            }
+            else if($p=="honey"){
+                $amt = $q * 20;
+                $o=20;
+                $item="Honey";
+            }
+			if(isset($_POST['submit'])){
+			echo "<tr>
+				<td><label for='price'>
+						Total Price
 					</label>
 				</td>
-				<td><input type="number" id="price" name="price"/>
+				<td>$q * $o = $amt for $item
 				</td>
-			</tr>
-            <tr><td></td><td><input type="submit" value="Product Sale" name="submit"/></td></tr>
-		</form>
+			</tr> <form method=post action='msg.php'>
+			<tr><td></td><td><input type='submit' value='Payment' name='submit'/></td></tr></form>
+			</form>"; }
+			 ?>
+
+			
+          
+		
 	</table>
+    
 </body>
 </html>

@@ -31,8 +31,6 @@ td, th {
 
 <div id='rightCol'>
     <ul id="bar">
-    <form method='post' action='DistributorPurchase.php'>
-       <li> <input type='submit' id='purchase' value='Purchase' name='purchase'/></li></form>
        <form method='post' action='DistributorSales.php'>
        <li> <input type='submit' id='sales' value='Sales' name='sales'/></li></form>
        <form method='post' action='DistributorList.php'>

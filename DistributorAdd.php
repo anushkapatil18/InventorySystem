@@ -18,17 +18,15 @@
 </div>
 
 <div id='rightCol'>
-    <ul id="bar">
-    <form method='post' action='DistributorPurchase.php'>
-       <li> <input type='submit' id='purchase' value='Purchase' name='purchase'/></li></form>
-       <form method='post' action='DistributorSales.php'>
+<ul id="bar">
+<form method='post' action='DistributorAdd.php'>
+       <li> <input type='submit' id='add' value='Insert' name='add'/></li></form>
+<form method='post' action='DistributorSales.php'>
        <li> <input type='submit' id='sales' value='Sales' name='sales'/></li></form>
        <form method='post' action='DistributorList.php'>
        <li> <input type='submit' id='list' value='List' name='list'/></li></form>
 </ul>
     </div>
-
-
     <table id="fm">
 		<form method=post action="msg.php">
 			<tr>
@@ -38,7 +36,7 @@
 					</label>
 				</td>
 				<td><select name="ids" id="ids">
-                <option value="10">--SELECT--</option>
+                <option value="maggie">--SELECT--</option>
   <option value="maggie">101-Maggie</option>
   <option value="soap">102-Soap</option>
   <option value="chocolate">103-Chocolate</option>
@@ -54,7 +52,7 @@
 				<td><input type="number" id="qty" name="qty"/>
 				</td>
 			</tr>
-			<tr>
+            <tr>
 				<td><label for="price">
 						Price
 					</label>
@@ -62,9 +60,12 @@
 				<td><input type="number" id="price" name="price"/>
 				</td>
 			</tr>
-            <tr><td></td><td><input type="submit" value="Distributor Purchase" name="submit"/></td></tr>
-		</form>
+			<tr><td></td><td><input type="submit" value="Add Item" name="submit"/></td></tr></form>
+			
+
+			
+          
+		
 	</table>
-    
 </body>
 </html>
