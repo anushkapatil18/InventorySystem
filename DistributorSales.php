@@ -19,6 +19,8 @@
 
 <div id='rightCol'>
     <ul id="bar">
+	<form method='post' action='DistributorAdd.php'>
+       <li> <input type='submit' id='add' value='Insert' name='add'/></li></form>
        <form method='post' action='DistributorSales.php'>
        <li> <input type='submit' id='sales' value='Sales' name='sales'/></li></form>
        <form method='post' action='DistributorList.php'>
