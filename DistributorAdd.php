@@ -26,9 +26,10 @@
        <form method='post' action='DistributorList.php'>
        <li> <input type='submit' id='list' value='List' name='list'/></li></form>
 </ul>
-    </div>
+</div>
+	
     <table id="fm">
-		<form method=post action="msg.php">
+		<form method=post action="insert.php">
 			<tr>
 				<td>
 					<label for="ids">
@@ -36,11 +37,12 @@
 					</label>
 				</td>
 				<td><select name="ids" id="ids">
-                <option value="maggie">--SELECT--</option>
-  <option value="maggie">101-Maggie</option>
-  <option value="soap">102-Soap</option>
-  <option value="chocolate">103-Chocolate</option>
-  <option value="honey">104-Honey</option>
+                <option value="101">--SELECT--</option>
+  <option value="d00001">d00001-Maggi</option>
+  <option value="d00002">d00002-Shampoo</option>
+  <option value="d00003">d00003-Face Wash</option>
+  <option value="d00004">d00004-Five Star</option>
+  <option value="d00005">d00005-Kit Kat</option>
     </select>
 				</td>
 			</tr>
@@ -60,12 +62,7 @@
 				<td><input type="number" id="price" name="price"/>
 				</td>
 			</tr>
-			<tr><td></td><td><input type="submit" value="Add Item" name="submit"/></td></tr></form>
-			
-
-			
-          
-		
+			<tr><td></td><td><input type="submit" value="Add Item" name="submit"/></td></tr></form>		
 	</table>
 </body>
 </html>

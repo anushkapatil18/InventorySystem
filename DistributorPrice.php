@@ -28,7 +28,7 @@
 
 
     <table id="fm">
-		<form method=post action="DistributorPrice.php">
+		<form method=post action="afterSale.php">
 			<tr>
 				<td>
 					<label for="ids">
@@ -36,11 +36,13 @@
 					</label>
 				</td>
 				<td><select name="ids" id="ids">
-                <option value="maggie">--SELECT--</option>
-  <option value="maggie">101-Maggie</option>
-  <option value="soap">102-Soap</option>
-  <option value="chocolate">103-Chocolate</option>
-  <option value="honey">104-Honey</option>
+                <<option value="d00001">--SELECT--</option>
+  <option value="d00001">d00001-Maggi</option>
+  <option value="d00002">d00002-Shampoo</option>
+  <option value="d00003">d00003-Face Wash</option>
+  <option value="d00004">d00004-Five Star</option>
+  <option value="d00005">d00005-Kit Kat</option>
+    </select>
     </select>
 				</td>
 			</tr>
@@ -52,45 +54,34 @@
 				<td><input type="number" id="qty" name="qty"/>
 				</td>
 			</tr>
-			<tr><td></td><td><input type="submit" value="Distributor Sale" name="submit"/></td></tr></form>
+			<tr><td></td><td><input type="submit" value="Make Payment" name="submit"/></td></tr></form>
 			<?php 
+            $con = mysqli_connect("localhost","root","");
+            mysqli_select_db($con,"osp_project"); 
+
 			$p = $_POST['ids'];
 			$q = $_POST['qty'];
-            
-			$amt=0;
-            $o=0;
+            $price=0;
             $item="";
-            if($p=="maggie"){
-                $amt = $q * 20;
-                $o=20;
-                $item="Maggie";
-            }
-            else if($p=="soap"){
-                $amt = $q * 25;
-                $o=25;
-                $item="Soap";
-            }
-            else if($p=="chocolate"){
-                $amt = $q * 4;
-                $o=4;
-                $item="Chocolate";
-            }
-            else if($p=="honey"){
-                $amt = $q * 20;
-                $o=20;
-                $item="Honey";
-            }
-			if(isset($_POST['submit'])){
+
+            $query = "select * from distributor where dist_id='$p'";
+            $result_set=mysqli_query($con,$query);
+
+            while($rec = mysqli_fetch_assoc($result_set)){
+            $price = $rec['price'];
+            $item = $rec['Name'];}
+
+            $amt = $q*$price;
 			echo "<tr>
 				<td><label for='price'>
 						Total Price
 					</label>
 				</td>
-				<td>$q * $o = $amt for $item
+				<td>$q * $price = $amt for $item
 				</td>
-			</tr> <form method=post action='msg.php'>
-			<tr><td></td><td><input type='submit' value='Receive Payment' name='submit'/></td></tr></form>
-			</form>"; }
+			</tr> 
+			</form>
+			</form>"; 
 			 ?>
 
 			
