@@ -37,7 +37,7 @@
 				</td>
 				<td><select name="ids" id="ids">
                 <option value="d00001">--SELECT--</option>
-  <option value="d00001">d00001-Maggi</option>
+  <option value="d00001">d00001-Maggie</option>
   <option value="d00002">d00002-Shampoo</option>
   <option value="d00003">d00003-Face Wash</option>
   <option value="d00004">d00004-Five Star</option>

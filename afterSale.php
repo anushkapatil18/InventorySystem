@@ -18,7 +18,9 @@ $query = "UPDATE distributor SET quantity = quantity-'$quantity' WHERE dist_id='
 mysqli_query($con,$query);//query execution
 $count2 = mysqli_affected_rows($con);
 if ($count1 ==1 and $count2==1)
-echo "Sale has been made"; //display message to user
+echo "<HTML>
+<body bgcolor='brown' align='center'>
+<h3 style='color:white;'>purchase has been made</h3></body></html>";
 else
 echo "Unsuccessfull",mysqli_error($con);
 mysqli_close($con);// connection closing
