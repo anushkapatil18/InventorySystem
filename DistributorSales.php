@@ -37,11 +37,12 @@
 					</label>
 				</td>
 				<td><select name="ids" id="ids">
-                <option value="maggie">--SELECT--</option>
-  <option value="maggie">101-Maggie</option>
-  <option value="soap">102-Soap</option>
-  <option value="chocolate">103-Chocolate</option>
-  <option value="honey">104-Honey</option>
+                <option value="d00001">--SELECT--</option>
+  <option value="d00001">d00001-Maggi</option>
+  <option value="d00002">d00002-Shampoo</option>
+  <option value="d00003">d00003-Face Wash</option>
+  <option value="d00004">d00004-Five Star</option>
+  <option value="d00005">d00005-Kit Kat</option>
     </select>
 				</td>
 			</tr>

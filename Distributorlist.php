@@ -39,37 +39,22 @@ td, th {
        <li> <input type='submit' id='list' value='List' name='list'/></li></form>
 </ul>
     </div>
-    <table id="fm">
-  <tr>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Quantity</th>
-	<th>Price</tr>
-  </tr>
-  <tr>
-    <td>101</td>
-    <td>Maggie</td>
-    <td>40</td>
-	<td>20</td>
-  </tr>
-  <tr>
-  	<td>102</td>
-    <td>Soap</td>
-    <td>100</td>
-	<td>25</td>
-  </tr>
-  <tr>
-  <td>103</td>
-    <td>Honey</td>
-    <td>90</td>
-	<td>4</td>
-  </tr>
-  <tr>
-  <td>105</td>
-    <td>Chocolate</td>
-    <td>500</td>
-	<td>20</td>
-  </tr>
-</table>
+<?php   
+$con = mysqli_connect("localhost","root","") or die(mysql_error());//establish connection
+mysqli_select_db($con,"osp_project") or die(mysql_error()); //selecting database
+$query = "select dist_id,Name,quantity,price from distributor";
+$result_set = mysqli_query($con,$query);
+echo "<table 
+border=1><tr><th>ID</th><th>Name</th><th>Quantity</th><th>Price</th></tr>";
+while($rec = mysqli_fetch_assoc($result_set)){
+echo "<tr><td>".$rec['dist_id']."</td>";
+echo "<td>".$rec['Name']."</td>";
+echo "<td>".$rec['quantity']."</td>";
+echo "<td>".$rec['price']."</td>";
+echo"</tr>";
+}
+echo"</table>";
+mysqli_close($con);
+?>
 </body>
 </html>
