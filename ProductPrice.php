@@ -37,7 +37,7 @@
 				</td>
 				<td><select name="ids" id="ids">
                 <option value="d00001">--SELECT--</option>
-  <option value="d00001">d00001-Maggi</option>
+  <option value="d00001">d00001-Maggie</option>
   <option value="d00002">d00002-Shampoo</option>
   <option value="d00003">d00003-Face Wash</option>
   <option value="d00004">d00004-Five Star</option>
@@ -50,8 +50,14 @@
 						Quantity
 					</label>
 				</td>
-				<td><input type="number" id="qty" name="qty"/>
+				<td><input type="number" id="qty" name="qty"/></td>
+			</tr>
+			<tr>
+				<td><label for="date">
+						Date
+					</label>
 				</td>
+				<td><input type="date" value="2020-10-1" id="date" name="date"/></td>
 			</tr>
 			<tr><td></td><td><input type="submit" value="Make Payment" name="submit"/></td></tr></form>
 			<?php 

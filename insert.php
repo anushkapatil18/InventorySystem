@@ -10,7 +10,9 @@ $query = "UPDATE distributor SET quantity = quantity+'$quantity', price= '$price
 mysqli_query($con,$query);//query execution
 $count = mysqli_affected_rows($con);
 if ($count ==1)
-echo "Record is inserted successfully"; //display message to user
+echo "<HTML>
+<body bgcolor='brown' align='center'>
+<h3 style='color:white;'>product has been added</h3></body></html>";
 else
 echo "Record not inserted- ",mysqli_error($con);
 mysqli_close($con);// connection closing
